@@ -1,0 +1,26 @@
+{
+  "name": "wepay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cahoco/wepay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cahoco/wepay/issues"
+  },
+  "homepage": "https://github.com/cahoco/wepay#readme",
+  "description": "",
+  "devDependencies": {
+    "laravel-vite-plugin": "^1.3.0",
+    "vite": "^6.3.5"
+  }
+}
