@@ -10,6 +10,12 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
-    @yield('content')
+    <header">
+        ヘッダー
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
 </body>
 </html>
