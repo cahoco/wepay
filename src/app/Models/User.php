@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'share_id', // ← これもfillableに追加（重要）
     ];
 
     /**
@@ -41,4 +42,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * リレーション：ユーザーは1つの共有グループに所属
+     */
+    public function share()
+    {
+        return $this->belongsTo(Share::class);
+    }
+
+    /**
+     * リレーション：ユーザーが登録した支出一覧
+     */
+    public function expenses()
+    {
+        return $this->hasMany(Expense::class);
+    }
+
+    /**
+     * リレーション：ユーザーのプロフィール（共有グループに属するユーザーごとの情報）
+     */
+    public function shareProfile()
+    {
+        return $this->hasOne(ShareProfile::class);
+    }
 }
